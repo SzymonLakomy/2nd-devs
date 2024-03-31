@@ -5,10 +5,6 @@ import { HumanMessage } from "langchain/schema";
 const chat = new ChatOpenAI();
 // Wywołanie modelu poprzez przesłanie tablicy wiadomości.
 // W tym przypadku to proste przywitanie
-const { content } = await chat.invoke([
-    new HumanMessage(
-        "Hey there!"
-    ),
-]);
+const { content } = await chat.invoke([new HumanMessage("Hey there!")]);
 
 console.log(content);
